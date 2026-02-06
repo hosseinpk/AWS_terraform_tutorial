@@ -1,0 +1,83 @@
+CAPEX : capital expenditure
+customer is 100% responsible for : design,csot,build,operations, upgrade and ...
+it meas all thing on you,even dont use all resource capacity
+
+OPEX: Operational expenditure ===> how much you use = how much you pay
+
+
+
+public cloud : 1) resources are publicly shared
+	       2) shared multi tenant infrastructure
+	       3)internet connectivity primarily used
+	       4) best suited for less confidentional data
+
+private clound: 1) resources are for private use
+          	2) for a singe customer,or for corporate busienss unites
+		3) connectivity over fiber, private network and internet
+		4) best suited for confidentional data, client private systems.
+
+
+Hybrid Cloud : is a mix of public and on-prem private clouad that is orchestrated to run a single task
+note: 1 - hybrid cloud is a more complex cloud solution because organization must manage multiple platforms.
+      2 - suitable for cost effectiveness,backup,disaster recovery, development and testing	
+
+
+Multi-Cloud : use multiple public cloud at same time (for different solutions
+and product.)
+
+IaaS(infrastructer as a service),Paas(Platform as a service),Saas(software as a service)(like email)
+
+
+
+(search about elastic beanstalk)
+Note : root username of your account ===> the email you register with it
+
+Billing and cost management : get report from account and services cost.
+
+we can set alert for cost management in billing and cost management by email and notification.
+
+
+
+IAM :
+(arn : amazon resource name)
+ IAM helps create and manage identities, authentication and authorizatrion of your accounts(s). your account trusts IAM and its decisions for authentication and authorization.
+
+ least of privilage principle : minimum access while your staff can do all their tasks.
+
+- AWS STS (security token service)
+
+
+eventually consistent : maybe get old data ( lower latency than strong consistency)
+strong consistency : should return newest data
+
+User,Groups,Role are the IAM identities
+
+best practice : define the group,add user to the group ===> assign policy to the group.
+
+
+deny policy is preferred to allow policy
+
+for consoloe login (GUI work) ==> username and password
+for programmatic access (cli,cdk,api,...) ==> you should use access and secret key,(create user,then create access and secret keys)
+
+Policies: policies are json file
+policies type : 1-managed(built-in) 2-custom permission 
+
+note : when a service want to use another service it should define specific role.!!!
+
+IAM Best practice :
+
+use cloudtrail to log and audit users.(monitor activity).
+
+- its recommend create a user,give it enough permission and do your job with this user and whenever possible : dont use root user.
+- use Groups to assign permissions to IAM users.
+- Enable MFA for privilege users
+- use Roles applications that run on AWS EC@ instances.  ???
+- 
+
+
+
+
+ 
+
+

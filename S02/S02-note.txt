@@ -1,0 +1,59 @@
+Billing and cost management only can access by root user
+
+VPC: Virtual Private Cloud
+
+VPV is a virtual data center in the cloud. 1- client has full control over it.
+				           2 - can have one or more subnets.
+					   3- a VPC is confined to a singe AWS regions.
+
+
+
+
+
+each VPC is isolated from other VPC in single region.
+
+
+each VPC has these components:
+
+1 - CIDR block and subnets.
+2 - implied router.
+3 - Route Tables.
+4 - IGW (Internet Gateway)
+5 - VGW (Virtual Private Gateway)
+6 - Security Groups
+7 - Network ACLs
+
+
+note: when you create a VPC you can  not change main cird you assigned to it.
+each AZ can has multiple subnet.
+
+implied router: 
+ - used to communicate among the subnets in VPCs, its managed by AWS and you cannot change it. and route table can has multiple subnets.
+
+IGW(Internet GateWay)
+
+IGW : managed by AWS,suppot ipv4 and ipv6 and its highly available.
+
+IGW should attach to specific VPC
+eash vpc can has only 1 IGW and each IGW can attach only to one VPC
+
+if you want create a VPC and grant internet access you should create a IGW and attached it to the VPC. without that the VPC is private.
+
+
+VGW : if you have hybrid cloud (on-premise cloud and public cloud) for connectivity between these 2,use VGW or (and direct connect)
+
+- VGW look like VPN. (its very depends on internet speed.)
+
+
+
+
+
+
+
+=======================================================================================
+
+EC2
+
+
+
+
