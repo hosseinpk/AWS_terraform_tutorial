@@ -24,7 +24,7 @@ each VPC has these components:
 7 - Network ACLs
 
 
-note: when you create a VPC you can  not change main cird you assigned to it.
+note: when you create a VPC you can  not change main CIDR you assigned to it.
 each AZ can has multiple subnet.
 
 implied router: 
@@ -32,10 +32,10 @@ implied router:
 
 IGW(Internet GateWay)
 
-IGW : managed by AWS,suppot ipv4 and ipv6 and its highly available.
+IGW : managed by AWS,support ipv4 and ipv6 and its highly available.
 
 IGW should attach to specific VPC
-eash vpc can has only 1 IGW and each IGW can attach only to one VPC
+each vpc can has only 1 IGW and each IGW can attach only to one VPC
 
 if you want create a VPC and grant internet access you should create a IGW and attached it to the VPC. without that the VPC is private.
 
@@ -61,8 +61,43 @@ for class scenario :
 
 =======================================================================================
 
-EC2
+EC2 (Elastic Compute Cloud)
+
+- resizable
+- ec2 instance can be provisioned on shared or dedicated host(resource)
+- instances are isolated from each other.
+- each instance is launched in a subnet in an AZ
+
+EBS (Elastic Block Store)
+
+- is a storage service.
+- can attach more than one volume to instance.
+- root volume (the volume that installed os on it.)
+- EC2 instances with an EBS root volume are called EB-backed-EC2 instances.(os should install on EBS)
+
+instance-store : temporary storage, high speed , faster than EBS
 
 
+connect to linux server : ssh
+connect to windows server : RDP
+
+you need a key pair to login (the private key you have and public key stored in AWS).
+download private key from console, grant permission (400),connect over ssh:
+
+ssh -i "<private_key>" <user@host>
+
+note : for keep ebs instance and data on it ==> delete on termination = no
 
 
+Private,public and Elastic IP Addresses
+
+
+Elastic IP Addresses : routable in internet, its a public ip address but when instances stopped in public ip address,
+ip will change after start again, Elastic IP Addresses is permanent(should assign manually),and after stop and restart, remain on instance.
+and should release manually. if you use it, not chargeable. if don't use you should charge it.
+
+for set in console:
+
+EC2 - Elastic IP Addresses - allocate Elastic ip address --> associate ip address to an instance
+
+for remove it --> diassociate Elastic ip address and release ip address
