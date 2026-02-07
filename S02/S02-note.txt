@@ -3,8 +3,8 @@ Billing and cost management only can access by root user
 VPC: Virtual Private Cloud
 
 VPV is a virtual data center in the cloud. 1- client has full control over it.
-				           2 - can have one or more subnets.
-					   3- a VPC is confined to a singe AWS regions.
+				          				   2 - can have one or more subnets.
+					   					   3- a VPC is confined to a singe AWS regions.
 
 
 
@@ -44,6 +44,15 @@ VGW : if you have hybrid cloud (on-premise cloud and public cloud) for connectiv
 
 - VGW look like VPN. (its very depends on internet speed.)
 
+for class scenario :
+
+1 - create a VPC
+2 - create 2 subnets
+3 - create a IGW fora and attach to VPC
+4 - create a Route Table in VPC
+5 - association subnets to a routing table (default table and the table you created it.)
+6 - add "0.0.0.0/0" route to public routing table
+7 - add EC2 instance on the vpc and specific subnet you want
 
 
 
